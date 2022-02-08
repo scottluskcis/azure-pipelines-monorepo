@@ -15,4 +15,4 @@ pool:
 
 steps:
   - script: |
-      echo "Hello from 'a'"
+      echo "Hello from 'a' this is a test"

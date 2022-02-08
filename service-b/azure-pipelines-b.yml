@@ -18,7 +18,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo "Hello from 'service-b'"
+- script: echo "Hello from 'service-b' this is a test"
 
 - script: npm install
   workingDirectory: $(working-dir)
