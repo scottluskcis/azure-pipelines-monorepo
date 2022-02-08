@@ -16,6 +16,6 @@ pool:
 
 stages:
 
-  - template: $(Build.SourcesDirectory)/templates/sample.yml
+  - template: ../templates/sample.yml
     parameters:
       working-dir: 'service-b/'
