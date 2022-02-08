@@ -1,6 +1,10 @@
 # Build numbering format
 name: $(BuildID)
 
+variables:
+  - name: working-dir
+    value: 'service-a/'
+
 trigger:
   branches:
     include:
