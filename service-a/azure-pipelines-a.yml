@@ -17,4 +17,4 @@ stages:
 
   - template: ../templates/sample.yml
     parameters:
-      working-dir: 'service-a/'
+      workingDir: 'service-a/'
