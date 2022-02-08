@@ -1,0 +1,20 @@
+parameters: 
+- name: working-dir
+  type: string 
+
+stages: 
+- stage: run
+  displayName: 'Run in ${{ parameters.working-dir }}'
+
+  jobs:
+
+  - job: run-job
+
+    steps: 
+      - script: echo "Hello from '${{ parameters.working-dir }}'"
+
+      - script: npm install
+        workingDirectory: ${{ parameters.working-dir }}
+
+      - script: npm run chalk
+        workingDirectory: ${{ parameters.working-dir }}

@@ -1,10 +1,6 @@
 # Build numbering format
 name: $(BuildID)
 
-variables:
-  - name: working-dir
-    value: 'service-b/'
-
 trigger:
   branches:
     include:
@@ -17,11 +13,9 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-- script: echo "Hello from 'service-b' this is a test"
 
-- script: npm install
-  workingDirectory: $(working-dir)
+stages:
 
-- script: npm run chalk
-  workingDirectory: $(working-dir)
+  - template: $(Build.SourcesDirectory)/templates/sample.yml
+    parameters:
+      working-dir: 'service-b/'
